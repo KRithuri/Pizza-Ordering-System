@@ -48,6 +48,8 @@
             cbSpinach = new CheckBox();
             cbShreddedChicken = new CheckBox();
             cbGroundedBeef = new CheckBox();
+            label2 = new Label();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -262,11 +264,29 @@
             cbGroundedBeef.Text = "Grounded Beef";
             cbGroundedBeef.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(111, 416);
+            label2.Name = "label2";
+            label2.Size = new Size(78, 15);
+            label2.TabIndex = 6;
+            label2.Text = "Amount Due:";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(209, 413);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(92, 23);
+            textBox1.TabIndex = 7;
+            // 
             // PizzaHut
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(453, 450);
+            Controls.Add(textBox1);
+            Controls.Add(label2);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(label1);
@@ -305,5 +325,7 @@
         private CheckBox cbMushroom;
         private CheckBox cbExtraCheese;
         private CheckBox cbPepperoni;
+        private Label label2;
+        private TextBox textBox1;
     }
 }
