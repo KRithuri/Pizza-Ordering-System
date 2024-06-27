@@ -23,7 +23,7 @@ namespace Pizza_Ordering_System
 
             func = (controls) =>
             {
-                foreach (Control control in Controls)
+                foreach (Control control in controls)
                 {
                     if (control is TextBox)
                     {
@@ -39,9 +39,32 @@ namespace Pizza_Ordering_System
             func(Controls);
         }
 
+        //function to reset checked boxes
+        private void ResetCheckBoxes()
+        {
+            Action<Control.ControlCollection> func = null;
+
+            func = (controls) =>
+            {
+                foreach (Control control in controls)
+                {
+                    if (control is CheckBox)
+                    {
+                        (control as CheckBox).Checked = false;
+                    }
+                    else
+                    {
+                        func(control.Controls);
+                    }
+                }
+
+            };
+            func(Controls);
+        }
         private void btnReset_Click(object sender, EventArgs e)
         {
-
+            ResetTexBox();
+            ResetCheckBoxes();
         }
     }
 }
