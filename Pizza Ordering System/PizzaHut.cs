@@ -12,23 +12,9 @@ namespace Pizza_Ordering_System
 {
     public partial class PizzaHut : Form
     {
+        //variable to count total amount
         int summ = 0;
 
-
-        decimal small;
-        decimal medium;
-        decimal large;
-        decimal thick;
-        decimal thin;
-        decimal pepperoni;
-        decimal extraCheese;
-        decimal mushroom;
-        decimal jalapeno;
-        decimal pineapple;
-        decimal driedShrimp;
-        decimal spinach;
-        decimal shreddedChicked;
-        decimal groundedBeef;
         public PizzaHut()
         {
             InitializeComponent();
