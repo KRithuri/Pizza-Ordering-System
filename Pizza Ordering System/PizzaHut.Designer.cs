@@ -38,19 +38,19 @@
             rbThin = new RadioButton();
             rbThick = new RadioButton();
             groupBox3 = new GroupBox();
+            chkGroundedBeef = new CheckBox();
+            chkShreddedChicken = new CheckBox();
+            chkSpinach = new CheckBox();
+            chkDriedShrimp = new CheckBox();
+            chkPineapple = new CheckBox();
+            chkJalapeno = new CheckBox();
+            chkMushroom = new CheckBox();
+            chkExtraCheese = new CheckBox();
+            chkPepperoni = new CheckBox();
             pictureBox1 = new PictureBox();
             label2 = new Label();
             txtTotal = new TextBox();
             btnReset = new Button();
-            chkPepperoni = new CheckBox();
-            chkExtraCheese = new CheckBox();
-            chkMushroom = new CheckBox();
-            chkJalapeno = new CheckBox();
-            chkPineapple = new CheckBox();
-            chkDriedShrimp = new CheckBox();
-            chkSpinach = new CheckBox();
-            chkShreddedChicken = new CheckBox();
-            chkGroundedBeef = new CheckBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -69,9 +69,11 @@
             // 
             // groupBox1
             // 
+            groupBox1.BackColor = Color.Transparent;
             groupBox1.Controls.Add(rbLarge);
             groupBox1.Controls.Add(rbMedium);
             groupBox1.Controls.Add(rbSmall);
+            groupBox1.ForeColor = SystemColors.ActiveCaptionText;
             groupBox1.Location = new Point(3, 133);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(368, 50);
@@ -89,6 +91,7 @@
             rbLarge.TabStop = true;
             rbLarge.Text = "Large (R55)";
             rbLarge.UseVisualStyleBackColor = true;
+            rbLarge.CheckedChanged += rbLarge_CheckedChanged;
             // 
             // rbMedium
             // 
@@ -100,6 +103,7 @@
             rbMedium.TabStop = true;
             rbMedium.Text = "Medium (R35)";
             rbMedium.UseVisualStyleBackColor = true;
+            rbMedium.CheckedChanged += rbMedium_CheckedChanged;
             // 
             // rbSmall
             // 
@@ -111,6 +115,7 @@
             rbSmall.TabStop = true;
             rbSmall.Text = "Small (R20)";
             rbSmall.UseVisualStyleBackColor = true;
+            rbSmall.CheckedChanged += rbSmall_CheckedChanged;
             // 
             // groupBox2
             // 
@@ -132,6 +137,7 @@
             rbThin.TabStop = true;
             rbThin.Text = "Thin(R1)";
             rbThin.UseVisualStyleBackColor = true;
+            rbThin.CheckedChanged += rbThin_CheckedChanged;
             // 
             // rbThick
             // 
@@ -143,6 +149,7 @@
             rbThick.TabStop = true;
             rbThick.Text = "Thick (R2)";
             rbThick.UseVisualStyleBackColor = true;
+            rbThick.CheckedChanged += rbThick_CheckedChanged;
             // 
             // groupBox3
             // 
@@ -162,8 +169,108 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Topping (R7 each)";
             // 
+            // chkGroundedBeef
+            // 
+            chkGroundedBeef.AutoSize = true;
+            chkGroundedBeef.Location = new Point(246, 108);
+            chkGroundedBeef.Name = "chkGroundedBeef";
+            chkGroundedBeef.Size = new Size(105, 19);
+            chkGroundedBeef.TabIndex = 8;
+            chkGroundedBeef.Text = "Grounded Beef";
+            chkGroundedBeef.UseVisualStyleBackColor = true;
+            chkGroundedBeef.CheckedChanged += chkGroundedBeef_CheckedChanged;
+            // 
+            // chkShreddedChicken
+            // 
+            chkShreddedChicken.AutoSize = true;
+            chkShreddedChicken.Location = new Point(246, 68);
+            chkShreddedChicken.Name = "chkShreddedChicken";
+            chkShreddedChicken.Size = new Size(122, 19);
+            chkShreddedChicken.TabIndex = 7;
+            chkShreddedChicken.Text = "Shredded Chicken";
+            chkShreddedChicken.UseVisualStyleBackColor = true;
+            chkShreddedChicken.CheckedChanged += chkShreddedChicken_CheckedChanged;
+            // 
+            // chkSpinach
+            // 
+            chkSpinach.AutoSize = true;
+            chkSpinach.Location = new Point(246, 31);
+            chkSpinach.Name = "chkSpinach";
+            chkSpinach.Size = new Size(68, 19);
+            chkSpinach.TabIndex = 6;
+            chkSpinach.Text = "Spinach";
+            chkSpinach.UseVisualStyleBackColor = true;
+            chkSpinach.CheckedChanged += chkSpinach_CheckedChanged;
+            // 
+            // chkDriedShrimp
+            // 
+            chkDriedShrimp.AutoSize = true;
+            chkDriedShrimp.Location = new Point(133, 108);
+            chkDriedShrimp.Name = "chkDriedShrimp";
+            chkDriedShrimp.Size = new Size(95, 19);
+            chkDriedShrimp.TabIndex = 5;
+            chkDriedShrimp.Text = "Dried Shrimp";
+            chkDriedShrimp.UseVisualStyleBackColor = true;
+            chkDriedShrimp.CheckedChanged += chkDriedShrimp_CheckedChanged;
+            // 
+            // chkPineapple
+            // 
+            chkPineapple.AutoSize = true;
+            chkPineapple.Location = new Point(133, 68);
+            chkPineapple.Name = "chkPineapple";
+            chkPineapple.Size = new Size(78, 19);
+            chkPineapple.TabIndex = 4;
+            chkPineapple.Text = "Pineapple";
+            chkPineapple.UseVisualStyleBackColor = true;
+            chkPineapple.CheckedChanged += chkPineapple_CheckedChanged;
+            // 
+            // chkJalapeno
+            // 
+            chkJalapeno.AutoSize = true;
+            chkJalapeno.Location = new Point(133, 31);
+            chkJalapeno.Name = "chkJalapeno";
+            chkJalapeno.Size = new Size(72, 19);
+            chkJalapeno.TabIndex = 3;
+            chkJalapeno.Text = "Jalapeno";
+            chkJalapeno.UseVisualStyleBackColor = true;
+            chkJalapeno.CheckedChanged += chkJalapeno_CheckedChanged;
+            // 
+            // chkMushroom
+            // 
+            chkMushroom.AutoSize = true;
+            chkMushroom.Location = new Point(6, 108);
+            chkMushroom.Name = "chkMushroom";
+            chkMushroom.Size = new Size(85, 19);
+            chkMushroom.TabIndex = 2;
+            chkMushroom.Text = "Mushroom";
+            chkMushroom.UseVisualStyleBackColor = true;
+            chkMushroom.CheckedChanged += chkMushroom_CheckedChanged;
+            // 
+            // chkExtraCheese
+            // 
+            chkExtraCheese.AutoSize = true;
+            chkExtraCheese.Location = new Point(6, 68);
+            chkExtraCheese.Name = "chkExtraCheese";
+            chkExtraCheese.Size = new Size(93, 19);
+            chkExtraCheese.TabIndex = 1;
+            chkExtraCheese.Text = "Extra Cheese";
+            chkExtraCheese.UseVisualStyleBackColor = true;
+            chkExtraCheese.CheckedChanged += chkExtraCheese_CheckedChanged;
+            // 
+            // chkPepperoni
+            // 
+            chkPepperoni.AutoSize = true;
+            chkPepperoni.Location = new Point(6, 31);
+            chkPepperoni.Name = "chkPepperoni";
+            chkPepperoni.Size = new Size(80, 19);
+            chkPepperoni.TabIndex = 0;
+            chkPepperoni.Text = "Pepperoni";
+            chkPepperoni.UseVisualStyleBackColor = true;
+            chkPepperoni.CheckedChanged += chkPepperoni_CheckedChanged;
+            // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = SystemColors.InactiveBorder;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(12, 12);
             pictureBox1.Name = "pictureBox1";
@@ -175,15 +282,15 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(25, 417);
+            label2.Location = new Point(3, 417);
             label2.Name = "label2";
-            label2.Size = new Size(88, 15);
+            label2.Size = new Size(91, 15);
             label2.TabIndex = 6;
-            label2.Text = "Amount Due: R";
+            label2.Text = "Amount Due:  R";
             // 
             // txtTotal
             // 
-            txtTotal.Location = new Point(119, 410);
+            txtTotal.Location = new Point(100, 414);
             txtTotal.Name = "txtTotal";
             txtTotal.Size = new Size(100, 23);
             txtTotal.TabIndex = 5;
@@ -198,100 +305,11 @@
             btnReset.UseVisualStyleBackColor = true;
             btnReset.Click += btnReset_Click;
             // 
-            // chkPepperoni
-            // 
-            chkPepperoni.AutoSize = true;
-            chkPepperoni.Location = new Point(6, 31);
-            chkPepperoni.Name = "chkPepperoni";
-            chkPepperoni.Size = new Size(80, 19);
-            chkPepperoni.TabIndex = 0;
-            chkPepperoni.Text = "Pepperoni";
-            chkPepperoni.UseVisualStyleBackColor = true;
-            // 
-            // chkExtraCheese
-            // 
-            chkExtraCheese.AutoSize = true;
-            chkExtraCheese.Location = new Point(6, 68);
-            chkExtraCheese.Name = "chkExtraCheese";
-            chkExtraCheese.Size = new Size(93, 19);
-            chkExtraCheese.TabIndex = 1;
-            chkExtraCheese.Text = "Extra Cheese";
-            chkExtraCheese.UseVisualStyleBackColor = true;
-            // 
-            // chkMushroom
-            // 
-            chkMushroom.AutoSize = true;
-            chkMushroom.Location = new Point(6, 108);
-            chkMushroom.Name = "chkMushroom";
-            chkMushroom.Size = new Size(85, 19);
-            chkMushroom.TabIndex = 2;
-            chkMushroom.Text = "Mushroom";
-            chkMushroom.UseVisualStyleBackColor = true;
-            // 
-            // chkJalapeno
-            // 
-            chkJalapeno.AutoSize = true;
-            chkJalapeno.Location = new Point(133, 31);
-            chkJalapeno.Name = "chkJalapeno";
-            chkJalapeno.Size = new Size(72, 19);
-            chkJalapeno.TabIndex = 3;
-            chkJalapeno.Text = "Jalapeno";
-            chkJalapeno.UseVisualStyleBackColor = true;
-            // 
-            // chkPineapple
-            // 
-            chkPineapple.AutoSize = true;
-            chkPineapple.Location = new Point(133, 68);
-            chkPineapple.Name = "chkPineapple";
-            chkPineapple.Size = new Size(78, 19);
-            chkPineapple.TabIndex = 4;
-            chkPineapple.Text = "Pineapple";
-            chkPineapple.UseVisualStyleBackColor = true;
-            // 
-            // chkDriedShrimp
-            // 
-            chkDriedShrimp.AutoSize = true;
-            chkDriedShrimp.Location = new Point(133, 108);
-            chkDriedShrimp.Name = "chkDriedShrimp";
-            chkDriedShrimp.Size = new Size(95, 19);
-            chkDriedShrimp.TabIndex = 5;
-            chkDriedShrimp.Text = "Dried Shrimp";
-            chkDriedShrimp.UseVisualStyleBackColor = true;
-            // 
-            // chkSpinach
-            // 
-            chkSpinach.AutoSize = true;
-            chkSpinach.Location = new Point(246, 31);
-            chkSpinach.Name = "chkSpinach";
-            chkSpinach.Size = new Size(68, 19);
-            chkSpinach.TabIndex = 6;
-            chkSpinach.Text = "Spinach";
-            chkSpinach.UseVisualStyleBackColor = true;
-            // 
-            // chkShreddedChicken
-            // 
-            chkShreddedChicken.AutoSize = true;
-            chkShreddedChicken.Location = new Point(246, 68);
-            chkShreddedChicken.Name = "chkShreddedChicken";
-            chkShreddedChicken.Size = new Size(122, 19);
-            chkShreddedChicken.TabIndex = 7;
-            chkShreddedChicken.Text = "Shredded Chicken";
-            chkShreddedChicken.UseVisualStyleBackColor = true;
-            // 
-            // chkGroundedBeef
-            // 
-            chkGroundedBeef.AutoSize = true;
-            chkGroundedBeef.Location = new Point(246, 108);
-            chkGroundedBeef.Name = "chkGroundedBeef";
-            chkGroundedBeef.Size = new Size(105, 19);
-            chkGroundedBeef.TabIndex = 8;
-            chkGroundedBeef.Text = "Grounded Beef";
-            chkGroundedBeef.UseVisualStyleBackColor = true;
-            // 
             // PizzaHut
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.SeaGreen;
             ClientSize = new Size(486, 450);
             Controls.Add(btnReset);
             Controls.Add(label2);
@@ -337,5 +355,6 @@
         private CheckBox chkMushroom;
         private CheckBox chkExtraCheese;
         private CheckBox chkPepperoni;
+        private Label lblTotal;
     }
 }
