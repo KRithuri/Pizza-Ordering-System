@@ -12,12 +12,30 @@ namespace Pizza_Ordering_System
 {
     public partial class PizzaHut : Form
     {
+        int summ = 0;
+
+
+        decimal small;
+        decimal medium;
+        decimal large;
+        decimal thick;
+        decimal thin;
+        decimal pepperoni;
+        decimal extraCheese;
+        decimal mushroom;
+        decimal jalapeno;
+        decimal pineapple;
+        decimal driedShrimp;
+        decimal spinach;
+        decimal shreddedChicked;
+        decimal groundedBeef;
         public PizzaHut()
         {
             InitializeComponent();
         }
+
         //function to reset everything 
-        private void ResetTexBox()
+        private void ResetTextBox()
         {
             Action<Control.ControlCollection> func = null;
 
@@ -28,6 +46,27 @@ namespace Pizza_Ordering_System
                     if (control is TextBox)
                     {
                         (control as TextBox).Text = "0";
+                    }
+                    else
+                    {
+                        func(control.Controls);
+                    }
+                }
+
+            };
+            func(Controls);
+        }
+        private void ResetLabel()
+        {
+            Action<Control.ControlCollection> func = null;
+
+            func = (controls) =>
+            {
+                foreach (Control control in controls)
+                {
+                    if (control is Label)
+                    {
+                        (control as Label).Text = "0";
                     }
                     else
                     {
@@ -61,10 +100,220 @@ namespace Pizza_Ordering_System
             };
             func(Controls);
         }
+        private void ResetRadioButtons()
+        {
+            Action<Control.ControlCollection> func = null;
+
+            func = (controls) =>
+            {
+                foreach (Control control in controls)
+                {
+                    if (control is RadioButton)
+                    {
+                        (control as RadioButton).Checked = false;
+                    }
+                    else
+                    {
+                        func(control.Controls);
+                    }
+                }
+
+            };
+            func(Controls);
+        }
+
         private void btnReset_Click(object sender, EventArgs e)
         {
-            ResetTexBox();
+            ResetTextBox();
             ResetCheckBoxes();
+            ResetRadioButtons();
+
+
+            summ = 0;
+        }
+
+
+
+        private void chkPepperoni_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPepperoni.Checked == true)
+            {
+                summ += 7;
+            }
+            else
+            {
+                summ -= 7;
+            }
+            txtTotal.Text = summ.ToString();
+        }
+
+        private void chkExtraCheese_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkExtraCheese.Checked == true)
+            {
+                summ += 7;
+            }
+            else
+            {
+                summ -= 7;
+            }
+            txtTotal.Text = summ.ToString();
+        }
+
+        private void chkMushroom_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkMushroom.Checked == true)
+            {
+                summ += 7;
+            }
+            else
+            {
+                summ -= 7;
+            }
+            txtTotal.Text = summ.ToString();
+        }
+
+        private void chkJalapeno_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkJalapeno.Checked == true)
+            {
+                summ += 7;
+            }
+            else
+            {
+                summ -= 7;
+            }
+            txtTotal.Text = summ.ToString();
+        }
+
+        private void chkPineapple_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPineapple.Checked == true)
+            {
+                summ += 7;
+            }
+            else
+            {
+                summ -= 7;
+            }
+            txtTotal.Text = summ.ToString();
+        }
+
+        private void chkDriedShrimp_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkDriedShrimp.Checked == true)
+            {
+                summ += 7;
+            }
+            else
+            {
+                summ -= 7;
+            }
+            txtTotal.Text = summ.ToString();
+        }
+
+        private void chkSpinach_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkSpinach.Checked == true)
+            {
+                summ += 7;
+            }
+            else
+            {
+                summ -= 7;
+            }
+            txtTotal.Text = summ.ToString();
+        }
+
+        private void chkShreddedChicken_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkShreddedChicken.Checked == true)
+            {
+                summ += 7;
+            }
+            else
+            {
+                summ -= 7;
+            }
+            txtTotal.Text = summ.ToString();
+        }
+
+        private void chkGroundedBeef_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkGroundedBeef.Checked == true)
+            {
+                summ += 7;
+            }
+            else
+            {
+                summ -= 7;
+            }
+            txtTotal.Text = summ.ToString();
+        }
+        //Radio buttons
+        private void rbThick_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbThick.Checked == true)
+            {
+                summ += 2;
+            }
+            else
+            {
+                summ -= 2;
+            }
+            txtTotal.Text = summ.ToString();
+        }
+
+        private void rbThin_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbThin.Checked == true)
+            {
+                summ += 1;
+            }
+            else
+            {
+                summ -= 1;
+            }
+            txtTotal.Text = summ.ToString();
+        }
+
+        private void rbSmall_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbSmall.Checked == true)
+            {
+                summ += 20;
+            }
+            else
+            {
+                summ -= 20;
+            }
+            txtTotal.Text = summ.ToString();
+        }
+
+        private void rbMedium_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbMedium.Checked == true)
+            {
+                summ += 35;
+            }
+            else
+            {
+                summ -= 35;
+            }
+            txtTotal.Text = summ.ToString();
+        }
+
+        private void rbLarge_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbLarge.Checked == true)
+            {
+                summ += 55;
+            }
+            else
+            {
+                summ -= 55;
+            }
+            txtTotal.Text = summ.ToString();
         }
     }
 }
