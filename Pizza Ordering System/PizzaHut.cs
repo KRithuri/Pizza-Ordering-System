@@ -100,6 +100,8 @@ namespace Pizza_Ordering_System
             };
             func(Controls);
         }
+
+        //Method to reset radio buttons
         private void ResetRadioButtons()
         {
             Action<Control.ControlCollection> func = null;
