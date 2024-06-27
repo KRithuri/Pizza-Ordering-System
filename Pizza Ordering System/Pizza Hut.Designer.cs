@@ -50,6 +50,7 @@
             cbGroundedBeef = new CheckBox();
             label2 = new Label();
             textBox1 = new TextBox();
+            btnReset = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -66,16 +67,7 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial Rounded MT Bold", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(165, 23);
-            label1.Name = "label1";
-            label1.Size = new Size(242, 55);
-            label1.TabIndex = 3;
-            label1.Text = "Pizza Hut";
-            label1.Click += this.label1_Click;
+           
             // 
             // groupBox1
             // 
@@ -88,7 +80,7 @@
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Pizza Size";
-            groupBox1.Enter += this.groupBox1_Enter;
+          
             // 
             // rbSmall
             // 
@@ -192,7 +184,7 @@
             cbExtraCheese.TabIndex = 1;
             cbExtraCheese.Text = "Extra Cheese";
             cbExtraCheese.UseVisualStyleBackColor = true;
-            cbExtraCheese.CheckedChanged += this.checkBox2_CheckedChanged;
+           
             // 
             // cbMushroom
             // 
@@ -280,11 +272,22 @@
             textBox1.Size = new Size(92, 23);
             textBox1.TabIndex = 7;
             // 
+            // btnReset
+            // 
+            btnReset.Location = new Point(349, 415);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(75, 23);
+            btnReset.TabIndex = 8;
+            btnReset.Text = "Reset";
+            btnReset.UseVisualStyleBackColor = true;
+           
+            // 
             // PizzaHut
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(453, 450);
+            Controls.Add(btnReset);
             Controls.Add(textBox1);
             Controls.Add(label2);
             Controls.Add(groupBox3);
@@ -327,5 +330,6 @@
         private CheckBox cbPepperoni;
         private Label label2;
         private TextBox textBox1;
+        private Button btnReset;
     }
 }
