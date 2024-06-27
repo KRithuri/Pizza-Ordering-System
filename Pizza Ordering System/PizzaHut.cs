@@ -133,7 +133,7 @@ namespace Pizza_Ordering_System
         }
 
 
-
+        //Check boxes
         private void chkPepperoni_CheckedChanged(object sender, EventArgs e)
         {
             if (chkPepperoni.Checked == true)
