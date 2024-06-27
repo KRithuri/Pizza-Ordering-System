@@ -122,6 +122,7 @@ namespace Pizza_Ordering_System
             func(Controls);
         }
 
+        //code to reset the whole form
         private void btnReset_Click(object sender, EventArgs e)
         {
             ResetTextBox();
